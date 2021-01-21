@@ -1,3 +1,3 @@
 # See Weather
 
-2020.01.21
+Pogoda - a program for displaying the weather in the city from the list.
