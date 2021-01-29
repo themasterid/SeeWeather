@@ -6,57 +6,90 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>498</width>
-    <height>113</height>
+    <width>530</width>
+    <height>166</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>498</width>
-    <height>113</height>
+    <width>530</width>
+    <height>166</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>498</width>
-    <height>113</height>
+    <width>530</width>
+    <height>166</height>
    </size>
   </property>
   <property name="windowTitle">
    <string>Погода</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="label_who">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>40</y>
-      <width>481</width>
+      <x>11</x>
+      <y>7</y>
+      <width>111</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Times New Roman</family>
-      <pointsize>12</pointsize>
       <weight>75</weight>
+      <italic>false</italic>
       <bold>true</bold>
      </font>
     </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
     <property name="text">
-     <string/>
+     <string>Название города</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox">
+   <widget class="QLineEdit" name="lineEdit_city">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>11</y>
+      <width>391</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>10</y>
-      <width>481</width>
-      <height>21</height>
+      <y>45</y>
+      <width>511</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Показать</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_info">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>79</y>
+      <width>511</width>
+      <height>81</height>
      </rect>
     </property>
     <property name="font">
@@ -64,32 +97,36 @@
       <family>Times New Roman</family>
       <pointsize>12</pointsize>
       <weight>75</weight>
+      <italic>false</italic>
       <bold>true</bold>
      </font>
     </property>
-    <property name="editable">
-     <bool>false</bool>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
     </property>
-    <property name="currentText">
+    <property name="text">
      <string/>
-    </property>
-    <property name="maxVisibleItems">
-     <number>10</number>
     </property>
    </widget>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>498</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>lineEdit_city</sender>
+   <signal>editingFinished()</signal>
+   <receiver>pushButton</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>253</x>
+     <y>17</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>258</x>
+     <y>53</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
