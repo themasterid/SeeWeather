@@ -1,3 +1,5 @@
+# by https://wttr.in/:help?lang=ru
+
 import requests
 from PyQt5 import QtWidgets
 from pogodaUI import Ui_MainWindow
