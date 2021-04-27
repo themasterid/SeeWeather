@@ -2,24 +2,16 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
-  <property name="geometry">
-   <rect>
-    <x>0</x>
-    <y>0</y>
-    <width>530</width>
-    <height>166</height>
-   </rect>
-  </property>
   <property name="minimumSize">
    <size>
     <width>530</width>
-    <height>166</height>
+    <height>283</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>530</width>
-    <height>166</height>
+    <height>283</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -83,29 +75,14 @@
      <string>Показать</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_info">
+   <widget class="QTextBrowser" name="text_out">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>79</y>
+      <y>80</y>
       <width>511</width>
-      <height>81</height>
+      <height>191</height>
      </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Times New Roman</family>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <italic>false</italic>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::NoFrame</enum>
-    </property>
-    <property name="text">
-     <string/>
     </property>
    </widget>
   </widget>
