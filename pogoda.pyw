@@ -1,10 +1,12 @@
 # by https://wttr.in/:help?lang=ru
 
+import sys
+
 import requests
 from PyQt5 import QtWidgets
-from pogodaUI import Ui_MainWindow
-import sys
+
 from list_weather import list_city
+from pogodaUI import Ui_MainWindow
 
 
 class Pogoda(QtWidgets.QMainWindow):
@@ -13,9 +15,9 @@ class Pogoda(QtWidgets.QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.ui.comboBox.addItems(list_city)
-        self.ui.comboBox.activated.connect(self.action)
+        self.ui.comboBox.activated.connect(self.get_weather)
 
-    def action(self):
+    def get_weather(self):
         weather_parameters = {
             '0': '',
             'T': ''
@@ -25,9 +27,11 @@ class Pogoda(QtWidgets.QMainWindow):
             'Accept-Language': 'ru'
         }
         return self.ui.text_out.setText(
-            requests.get(f'https://wttr.in/{self.ui.comboBox.currentText()}',
-                                            params=weather_parameters,
-                                            headers=request_headers).text)
+            requests.get(
+                f'https://wttr.in/{self.ui.comboBox.currentText()}',
+                params=weather_parameters,
+                headers=request_headers).text)
+
 
 if __name__ in "__main__":
     app = QtWidgets.QApplication([])
