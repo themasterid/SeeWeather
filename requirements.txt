@@ -1,4 +1,4 @@
 requests==2.32.4
 bs4==0.0.1
 PyQt5==5.15.2
-pyinstaller==5.13.1
+pyinstaller==6.0.0
